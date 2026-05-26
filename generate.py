@@ -1,5 +1,5 @@
 import torch
-from gpt import GPTLanguageModel, decode, device, block_size
+from model import GPTLanguageModel, decode, device, block_size
 
 # Load the saved model
 model = GPTLanguageModel()
