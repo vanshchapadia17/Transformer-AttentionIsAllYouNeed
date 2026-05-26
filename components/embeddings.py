@@ -32,8 +32,8 @@ class embeddings(nn.Module):
     def forward(self, idx):  
         B, T = idx.shape
 
-        tok_emb = self.token_embedding_table(idx) # (B, T, n_embd)
-        pos_emb = self.position_embedding_table(torch.arange(T, device=device)) # (T, n_embd)
+        token_emb = self.token_embedding_table(idx) # (B, T, n_embd)
+        position_emb = self.position_embedding_table(torch.arange(T, device=device)) # (T, n_embd)
 
-        return tok_emb + pos_emb   # (B, T, n_embd)
+        return token_emb + position_emb   # (B, T, n_embd)
     
